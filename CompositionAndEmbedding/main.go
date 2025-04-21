@@ -40,4 +40,23 @@ func main() {
 	resp, _ := json.Marshal(emp1)
 
 	fmt.Println(string(resp))
+
+	values := []int{1, 2, 3, 5}
+	var prints []func()
+
+	for index, value := range values {
+		prints = append(prints, func() {
+			fmt.Println("adding vlaue", value, index)
+			Printme(value)
+		})
+	}
+
+	for _, print := range prints {
+		print()
+	}
+
+}
+
+func Printme(x int) {
+	fmt.Println("printing ", x)
 }
