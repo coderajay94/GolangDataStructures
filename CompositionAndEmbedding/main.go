@@ -46,7 +46,7 @@ func main() {
 
 	for index, value := range values {
 		prints = append(prints, func() {
-			fmt.Println("adding vlaue", value, index)
+			fmt.Println("adding value", value, index)
 			Printme(value)
 		})
 	}
